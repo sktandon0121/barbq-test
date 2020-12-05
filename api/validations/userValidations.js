@@ -19,16 +19,16 @@ const registerValidation=(data)=>{
 };
 
 const loginValidation=data=>{
-    const schema = {
+    const schema = Joi.object({
         email: Joi.string()
         .min(6)
         .required(),
         password: Joi.string()
         .min(6)
         .required(),
-    }
+    })
 
-    return Joi.validate(data,schema);
+    return schema.validate(data);
 }
 
 

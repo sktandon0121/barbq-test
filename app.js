@@ -16,11 +16,13 @@ mongoose.connect(process.env.DB_CONNECT,
 
 /* import auth router  */
 const authRouter = require('./api/routes/auth');
+const postRouter = require('./api/routes/post');
 
 /* body parser middleware  */
 app.use(express.json());
 /* using the middleware */
 app.use('/api/user',authRouter);
+app.use('/api/posts',postRouter);
 
 
 
