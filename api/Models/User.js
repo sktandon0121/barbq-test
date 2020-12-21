@@ -23,6 +23,10 @@ const userSchema = new Schema({
         max:1024,
         required:true
     },
+    token:{
+        type:String,
+        
+    },
     date:{
         type: Date,
         default: Date.now
