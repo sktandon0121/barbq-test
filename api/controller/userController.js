@@ -33,12 +33,37 @@ const RegisterUser=async (req,res,next)=>{
     }
 };
 
+/* get all user list  */
+exports.GetAllUsers=(req,res)=>{
+    
+}
 
 /* Update User details  */
 
 const UpdateUser = async (req,res,next)=>{
     
 };
+
+/* Getting the role of the user  */
+exports.WhoAmI = async (req,res,next)=>{
+
+}
+
+/* Edit Profile after registeration  */
+exports.EditProfile= async(req,res,next)=>{
+
+}
+
+/* Change the profile password */
+exports.ChangePassword = (req,res,next)=>{
+
+}
+
+/* Getting the link of forgot password */
+exports.ForgotPassword = (req,res,next) =>{
+
+}
+
 
 
 exports.RegisterUser = RegisterUser;

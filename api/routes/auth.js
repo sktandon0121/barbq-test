@@ -2,9 +2,11 @@ const router = require('express').Router();
 
 const verifyToken  = require('./../verifyToken');
 
-const {loginUser, Logout} = require('./../controller/authController');
+const {loginUser, Logout,WhoAmI} = require('./../controller/authController');
 const {RegisterUser} = require('./../controller/userController');
 
+/* Getting who am I i.e  getting the role of user i.e 'user' or 'owner' */
+router.post('/whoami',WhoAmI)
 /* Register the user  */
 router.post('/register',RegisterUser);
 
